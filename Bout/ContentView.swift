@@ -6,16 +6,14 @@
 //
 
 import SwiftUI
+import CalendarProgressTracker
 
 struct ContentView: View {
+    @Environment(\.calendar) private var calendar
+    @Environment(\.timeZone) private var timeZone
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        CalendarProgressTracker(calendar: calendar, timeZone: timeZone)
     }
 }
 

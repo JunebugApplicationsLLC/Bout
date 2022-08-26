@@ -11,6 +11,7 @@
 		07B330A028B5D403009A483C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B3309F28B5D403009A483C /* ContentView.swift */; };
 		07B330A228B5D404009A483C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B330A128B5D404009A483C /* Assets.xcassets */; };
 		07B330A528B5D404009A483C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B330A428B5D404009A483C /* Preview Assets.xcassets */; };
+		07B330AE28B5E4A4009A483C /* CalendarProgressTracker in Frameworks */ = {isa = PBXBuildFile; productRef = 07B330AD28B5E4A4009A483C /* CalendarProgressTracker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		07B3309F28B5D403009A483C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07B330A128B5D404009A483C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07B330A428B5D404009A483C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07B330AB28B5E464009A483C /* CalendarProgressTracker */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CalendarProgressTracker; path = ../CalendarProgressTracker; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07B330AE28B5E4A4009A483C /* CalendarProgressTracker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,8 +38,10 @@
 		07B3309128B5D403009A483C = {
 			isa = PBXGroup;
 			children = (
+				07B330AB28B5E464009A483C /* CalendarProgressTracker */,
 				07B3309C28B5D403009A483C /* Bout */,
 				07B3309B28B5D403009A483C /* Products */,
+				07B330AC28B5E4A4009A483C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +72,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		07B330AC28B5E4A4009A483C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,6 +95,9 @@
 			dependencies = (
 			);
 			name = Bout;
+			packageProductDependencies = (
+				07B330AD28B5E4A4009A483C /* CalendarProgressTracker */,
+			);
 			productName = Bout;
 			productReference = 07B3309A28B5D403009A483C /* Bout.app */;
 			productType = "com.apple.product-type.application";
@@ -339,6 +354,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		07B330AD28B5E4A4009A483C /* CalendarProgressTracker */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CalendarProgressTracker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 07B3309228B5D403009A483C /* Project object */;
 }
