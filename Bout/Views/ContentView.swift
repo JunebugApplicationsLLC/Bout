@@ -13,7 +13,16 @@ struct ContentView: View {
     @Environment(\.timeZone) private var timeZone
     
     var body: some View {
-        CalendarProgressTracker(calendar: calendar, timeZone: timeZone)
+        TabView {
+            CalendarProgressTracker(calendar: calendar, timeZone: timeZone)
+                .tabItem {
+                    Label("Monthly Progress", systemImage: "calendar")
+                }
+            TotalPunchesThrownBarChart()
+                .tabItem {
+                    Label("Insights", systemImage: "chart.xyaxis.line")
+                }
+        }
     }
 }
 
