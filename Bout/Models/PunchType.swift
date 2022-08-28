@@ -10,10 +10,10 @@ import SwiftUI
 enum PunchType: String, CaseIterable {
     case jab
     case straight
-    case leftUppercut = "Left Uppercut"
-    case rightUppercut = "Right Uppercut"
-    case leftHook = "Left Hook"
-    case rightHook = "Right Hook"
+    case leftUppercut = "Left\nUppercut"
+    case rightUppercut = "Right\nUppercut"
+    case leftHook = "Left\nHook"
+    case rightHook = "Right\nHook"
     
     static func color(for punchType: PunchType) -> Color {
         switch punchType {
