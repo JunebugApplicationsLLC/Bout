@@ -15,7 +15,7 @@ struct TotalPunchesThrownBarChart: View {
                 Text("Previous Bout Stats")
                     .font(.title2).bold()
                 Text("Duration: 6 minutes")
-                    .font(.caption).italic()
+                    .font(.caption)
                 GroupBox("\(testTotalPunches) Total Punches Thrown") {
                     Chart(testTotalPunchesThrown) { punch in
                         BarMark(x: .value(LocalizedStringKey("Punch Type"), punch.type.rawValue.capitalized), y: .value(LocalizedStringKey("Punch Count"), punch.totalPunchesThrown))
@@ -65,7 +65,7 @@ var testTotalPunches: Int {
 }
 
 var testTotalPunchesThrown: [TestPunch] {
-    var testPunches: [TestPunch] = [
+    let testPunches: [TestPunch] = [
         TestPunch(type: .jab, totalPunchesThrown: 46),
         TestPunch(type: .straight, totalPunchesThrown: 56),
         TestPunch(type: .leftUppercut, totalPunchesThrown: 21),

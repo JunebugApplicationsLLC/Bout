@@ -14,14 +14,33 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            CalendarProgressTracker(calendar: calendar, timeZone: timeZone)
-                .tabItem {
-                    Label("Monthly Progress", systemImage: "calendar")
-                }
-            TotalPunchesThrownBarChart()
-                .tabItem {
-                    Label("Insights", systemImage: "chart.xyaxis.line")
-                }
+            NavigationView {
+                Text("Camera View")
+                    .navigationTitle("Bout")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+            .tabItem {
+                Label("New Bout", systemImage: "camera")
+            }
+            NavigationView {
+                CalendarProgressTracker(calendar: calendar, timeZone: timeZone)
+                    .navigationTitle("Bout")
+                    .navigationBarTitleDisplayMode(.inline)
+                
+            }
+            .tabItem {
+                Label("Monthly Progress", systemImage: "calendar")
+            }
+            NavigationView {
+                TotalPunchesThrownBarChart()
+                    .navigationTitle("Bout")
+                    .navigationBarTitleDisplayMode(.inline)
+                    
+                
+            }
+            .tabItem {
+                Label("Insights", systemImage: "chart.xyaxis.line")
+            }
         }
     }
 }
