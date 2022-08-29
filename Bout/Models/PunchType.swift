@@ -15,20 +15,24 @@ enum PunchType: String, CaseIterable {
     case leftHook = "Left\nHook"
     case rightHook = "Right\nHook"
     
-    static func color(for punchType: PunchType) -> Color {
-        switch punchType {
-        case .jab:
-            return .pink
-        case .straight:
-            return .orange
-        case .leftUppercut:
-            return .yellow
-        case .rightUppercut:
-            return .green
-        case .leftHook:
-            return .cyan
-        case .rightHook:
-            return .blue
+    static func color(scheme: ChartColorScheme,for punchType: PunchType) -> Color {
+        switch scheme {
+        default:
+            switch punchType {
+            case .jab:
+                return .pink
+            case .straight:
+                return .orange
+            case .leftUppercut:
+                return .yellow
+            case .rightUppercut:
+                return .green
+            case .leftHook:
+                return .cyan
+            case .rightHook:
+                return .blue
+            }
         }
+        
     }
 }

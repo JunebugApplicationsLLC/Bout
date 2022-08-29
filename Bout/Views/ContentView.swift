@@ -12,6 +12,8 @@ struct ContentView: View {
     @Environment(\.calendar) private var calendar
     @Environment(\.timeZone) private var timeZone
     
+    var previousBoutViewModel = PreviousBoutViewModel(stats: BoutSessionStats(totalPunchesTracked: testTotalPunches, totalPunchesTrackedInfo: testTotalPunchesThrown, duration: 6))
+    
     var body: some View {
         TabView {
             NavigationView {
@@ -32,7 +34,7 @@ struct ContentView: View {
                 Label("Monthly Progress", systemImage: "calendar")
             }
             NavigationView {
-                TotalPunchesThrownBarChart()
+                TotalPunchesThrownBarChart(previousBoutViewModel)
                     .navigationTitle("Bout")
                     .navigationBarTitleDisplayMode(.inline)
                     
